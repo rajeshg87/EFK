@@ -1,0 +1,13 @@
+kind: Service 
+apiVersion: v1 
+metadata: 
+  name: log-app-svc
+spec: 
+  selector: 
+    app: log-app 
+  ports: 
+  - protocol: TCP 
+    port: 8765
+    targetPort: 8765
+    nodePort: 32000 
+  type: NodePort
